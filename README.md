@@ -50,3 +50,18 @@ Thus, we have obtained the required credentials: Name, DOB, PAN id, and then, th
 
 ***Application:***
 The application is in banking or any sector where PAN based KYC is needed.
+
+**Packages:**
+$ pip install flask
+$ pip install flask_uploads
+$ pip install --upgrade azure-cognitiveservices-vision-computervision
+
+**Modification:**
+> Navigate to **C:/Program Files/Python36/Lib/site-packages
+> Open flask_uploads.py
+> Replace => from werkzeug import secure_filename, FileStorage
+> with => from werkzeug.utils import secure_filename
+>         from werkzeug.datastructures import FileStorage
+> Open upload.py=> Modify-> app.config['UPLOADED_PHOTOS_DEST'] = **'C:/Users/SA20111930/Assessment/OCR_based_web_app_flask_SAYAN_HAZRA/Image'** with own image path
+
+
